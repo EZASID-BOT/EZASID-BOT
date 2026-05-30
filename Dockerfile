@@ -4,12 +4,13 @@ RUN apt-get update && apt-get install -y --no-install-recommends poppler-utils &
 
 WORKDIR /app
 
-# Render የሞላናቸውን ቶከኖች ለዶከር ሲስተም ማስተላለፊያ
 ENV BOT_TOKEN=${BOT_TOKEN}
+ENV TOKEN=${TOKEN}
 ENV GEMINI_API_KEY=${GEMINI_API_KEY}
+ENV API_KEY=${API_KEY}
 
-COPY requirement.txt .
-RUN pip install --no-cache-dir -r requirement.txt
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
