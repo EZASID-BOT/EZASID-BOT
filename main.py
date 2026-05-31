@@ -7,7 +7,7 @@ import google.generativeai as genai
 
 # --- የቁልፎች ማገናኛ (የላክሃቸው መረጃዎች) ---
 BOT_TOKEN = "8673924309:AAGXgULwObYVubreWcDUVGLtww3DXN2TN10"
-GEMINI_API_KEY = "AQ.Ab8RN6Js3KRUi-P0n9nw0dtdj7pttFVQq7yQIVaQEFx-7T1Wdw"
+GEMINI_API_KEY = "AQ.Ab8RN6Lqq87xDUBM4I0zyO1gfhOMemQgTeWYDSCWse1r_Iibmg"
 
 # ቦቶቹን የማንቂያ ሲስተም
 bot = telebot.TeleBot(BOT_TOKEN)
