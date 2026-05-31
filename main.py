@@ -57,4 +57,25 @@ if __name__ == "__main__":
     t = Thread(target=run)
     t.start()
     # ከዚህ በታች ቦትህን የሚያስጀምረው ኮድህ ይቀጥላል (ለምሳሌ bot.run())
+from telegram import BotCommand
+
+async def set_commands(bot):
+    commands = [
+        BotCommand("menu", "Show the main menu"),
+        BotCommand("upload", "Upload an Ethiopian ID PDF"),
+        BotCommand("topup", "Buy a credit package"),
+        BotCommand("balance", "Check your credit balance"),
+        BotCommand("jobs", "Recent ID jobs"),
+        BotCommand("dashboard", "Open the web dashboard"),
+        BotCommand("profile", "Your profile"),
+        BotCommand("settings", "Output settings"),
+        BotCommand("language", "Change language"),
+        BotCommand("refer", "Your referral link"),
+        BotCommand("help", "Help"),
+        BotCommand("cancel", "Cancel the current flow"),
+    ]
+    await bot.set_my_commands(commands)
+
+# ይህንን በ main() ውስጥ ወይም ቦቱ በሚነሳበት ቦታ ላይ ይጠሩታል:
+# await set_commands(bot)
 
